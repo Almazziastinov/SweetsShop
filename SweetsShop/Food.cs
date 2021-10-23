@@ -24,52 +24,20 @@ namespace SweetsShop
         abstract public void PrintInfo();
 
     }
-
-    class Chocolate : Food
+    class InformationFood : Food
     {
-        public string Stuffing { set; private get; }
-        public Chocolate(string nameof, int mass, string price, int stock, string stuffing) : base (nameof, mass, price, stock)
+        public InformationFood(string nameof, int mass, string price, int stock) : base(nameof, mass, price, stock)
         {
-            Stuffing = stuffing;
+
         }
         public override void PrintInfo()
         {
             Console.WriteLine($"{NameOf}, {Mass}гр, {Price}р, {Stock}шт");
         }
-
+        
     }
-    class Candy : Food
+    class FoodChoice
     {
-        public Candy(string nameof, int mass, string price, int stock) : base(nameof, mass, price, stock)
-        {
-            
-        }
-        public override void PrintInfo()
-        {
-            Console.WriteLine($"{NameOf}, {Mass}гр, {Price}р, {Stock}шт");
-        }
-
-    }
-    class Marmalade : Food
-    {
-        public Marmalade(string nameof, int mass, string price, int stock) : base(nameof, mass, price, stock)
-        {
-
-        }
-        public override void PrintInfo()
-        {
-            Console.WriteLine($"{NameOf}, {Mass}гр, {Price}р, {Stock}шт");
-        }
-    }
-    class Marshmallow : Food
-    {
-        public Marshmallow(string nameof, int mass, string price, int stock) : base(nameof, mass, price, stock)
-        {
-
-        }
-        public override void PrintInfo()
-        {
-            Console.WriteLine($"{NameOf}, {Mass}гр, {Price}р, {Stock}шт");
-        }
+        
     }
 }
